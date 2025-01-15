@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservice</title>
+</head>
+
+<body>
+
+    <h1>Microservice</h1>
+
+    <a href="/ms1"><button>Entry Via MS1</button></a>
+    <a href="/ms2"><button>Entry Via MS2</button></a>
+    <a href="/ms3"><button>Entry Via MS3</button></a>
+
+    <hr>
+
+    <h2>Data DB-A</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Semester</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for item in db_a_data %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nama }}</td>
+            <td>{{ item.sem }}</td>
+            <td>{{ item.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Data DB-B</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Semester</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for item in db_b_data %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nama }}</td>
+            <td>{{ item.sem }}</td>
+            <td>{{ item.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
